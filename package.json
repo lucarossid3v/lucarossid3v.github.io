@@ -10,12 +10,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lucarossid3v/lucarossi-d3v.git"
+    "url": "git+https://github.com/lucarossid3v/lucarossid3v.github.io.git"
   },
   "bugs": {
-    "url": "https://github.com/lucarossid3v/lucarossi-d3v/issues"
+    "url": "https://github.com/lucarossid3v/lucarossid3v.github.io/issues"
   },
-  "homepage": "https://github.com/lucarossid3v/lucarossi-d3v#readme",
+  "homepage": "https://lucarossid3v.github.io",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
