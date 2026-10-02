@@ -4,11 +4,12 @@ import { satteri } from '@astrojs/markdown-satteri';
 import { rehypeCallouts } from './src/plugins/rehype-callouts.mjs';
 
 export default defineConfig({
-  site: 'https://minrock.vercel.app',
+  // Placeholder until the final domain is decided; override with SITE_URL
+  site: process.env.SITE_URL || 'https://lucarossid3v.github.io',
   integrations: [sitemap()],
   prefetch: {
     prefetchAll: true,
-    defaultStrategy: 'hover'
+    defaultStrategy: 'hover',
   },
   markdown: {
     processor: satteri({
@@ -16,15 +17,23 @@ export default defineConfig({
     }),
     shikiConfig: {
       theme: 'github-dark-dimmed',
-      wrap: true
-    }
+      wrap: true,
+    },
   },
   vite: {
     server: {
       watch: {
-        ignored: ['**/.obsidian/**', '**/_bases/**', '**/bases/**', '**/_home/**', '**/home/**', '**/_base/**', '**/base/**']
-      }
+        ignored: [
+          '**/.obsidian/**',
+          '**/_bases/**',
+          '**/bases/**',
+          '**/_home/**',
+          '**/home/**',
+          '**/_base/**',
+          '**/base/**',
+        ],
+      },
     },
-    assetsInclude: ['**/*.base', '**/.obsidian/**', '**/_bases/**']
-  }
+    assetsInclude: ['**/*.base', '**/.obsidian/**', '**/_bases/**'],
+  },
 });

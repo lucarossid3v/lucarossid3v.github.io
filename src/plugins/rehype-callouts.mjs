@@ -1,5 +1,5 @@
 /**
- * 🪨 Minrock — Native Obsidian & GitHub Callouts Plugin for Sätteri (Astro 7)
+ * Native Obsidian & GitHub Callouts Plugin for Sätteri (Astro 7)
  * Converts Markdown blockquotes like `> [!TIP]` into semantic `<aside class="callout" data-callout="...">`
  * with vector SVG icons and proper accessibility roles.
  */
