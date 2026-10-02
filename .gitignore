@@ -19,6 +19,7 @@ pnpm-debug.log*
 # OS & Editor files
 .DS_Store
 Thumbs.db
+materiale/
 .vscode/
 .idea/
 *.suo
