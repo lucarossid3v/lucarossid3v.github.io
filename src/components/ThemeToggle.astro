@@ -1,6 +1,6 @@
 ---
 // src/components/ThemeToggle.astro
-// Dropdown menu for Minrock themes (Clean White, Warm Paper, Slate Navy, Midnight OLED, Auto)
+// Dropdown menu for site themes (Clean White, Warm Paper, Slate Navy, Midnight OLED, Auto)
 ---
 
 <div class="theme-selector" id="theme-selector">
@@ -273,14 +273,14 @@
     }
 
     function applyTheme(mode: string) {
-      localStorage.setItem('minrock_theme', mode);
+      localStorage.setItem('lrd3_theme', mode);
       const effective = getEffectiveTheme(mode);
       document.documentElement.setAttribute('data-theme', effective);
 
       updateThemeUI(mode);
 
-      // Dispatch event for reactive components (like ScatterLeaf chameleon mode)
-      window.dispatchEvent(new CustomEvent('minrock-theme-change', { detail: { theme: effective, mode } }));
+      // Dispatch event for reactive components (theme-aware components)
+      window.dispatchEvent(new CustomEvent('lrd3-theme-change', { detail: { theme: effective, mode } }));
     }
 
     function positionDropdown() {
@@ -307,7 +307,7 @@
     }
 
     // Initialize UI on mount
-    const saved = localStorage.getItem('minrock_theme') || 'cream';
+    const saved = localStorage.getItem('lrd3_theme') || 'cream';
     updateThemeUI(saved);
 
     // Toggle dropdown
@@ -361,7 +361,7 @@
 
     // Listen to OS theme changes if on auto
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-      const current = localStorage.getItem('minrock_theme') || 'cream';
+      const current = localStorage.getItem('lrd3_theme') || 'cream';
       if (current === 'auto') {
         applyTheme('auto');
       }

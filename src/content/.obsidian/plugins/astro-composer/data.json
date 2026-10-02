@@ -27,7 +27,7 @@
       "enableUnderscorePrefix": false
     },
     {
-      "id": "content-type-minrock-projects",
+      "id": "content-type-projects",
       "name": "Projects",
       "folder": "projects",
       "linkBasePath": "/projects/",

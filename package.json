@@ -1,34 +1,21 @@
 {
-  "name": "minrock",
+  "name": "lucarossi-d3",
   "type": "module",
-  "version": "0.2.2",
-  "description": "Minimalist, typography-first Astro 7 theme crafted for technical writers and Obsidian vaults. Pure SSG, zero bloat.",
+  "version": "0.1.0",
+  "description": "Tech and programming blog by Luca Rossi",
   "engines": {
     "node": ">=22.12.0"
   },
-  "author": "Renato Rezende (https://github.com/rnt-rez)",
+  "author": "Luca Rossi (https://github.com/lucarossid3v)",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rnt-rez/minrock.git"
+    "url": "git+https://github.com/lucarossid3v/lucarossi-d3v.git"
   },
   "bugs": {
-    "url": "https://github.com/rnt-rez/minrock/issues"
+    "url": "https://github.com/lucarossid3v/lucarossi-d3v/issues"
   },
-  "homepage": "https://github.com/rnt-rez/minrock#readme",
-  "keywords": [
-    "astro",
-    "astro-theme",
-    "obsidian",
-    "obsidian-vault",
-    "obsidian-md",
-    "obsidian-publish",
-    "typography",
-    "blog-theme",
-    "ssg",
-    "technical-writing",
-    "minimalist"
-  ],
+  "homepage": "https://github.com/lucarossid3v/lucarossi-d3v#readme",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -63,5 +50,10 @@
   },
   "allowScripts": {
     "esbuild": true
-  }
+  },
+  "keywords": [
+    "astro",
+    "blog",
+    "programming"
+  ]
 }

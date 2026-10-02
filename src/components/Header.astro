@@ -17,8 +17,7 @@ const showThemeSwitcher = features.themeSwitcher !== false;
 <header class="site-header">
   <div class="container-wide header-inner">
     <!-- Brand -->
-    <a href="/" class="brand" aria-label="Minrock Home">
-      <span class="brand-rock">🪨</span>
+    <a href="/" class="brand" aria-label={`${siteConfig.title} Home`}>
       <span class="brand-title">{siteConfig.title}</span>
     </a>
 
@@ -100,10 +99,6 @@ const showThemeSwitcher = features.themeSwitcher !== false;
     letter-spacing: -0.02em;
     text-decoration: none;
     color: var(--text);
-  }
-
-  .brand-rock {
-    font-size: 1.35rem;
   }
 
   .nav {

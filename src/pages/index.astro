@@ -29,7 +29,7 @@ const topTags = [...tagsMap.entries()]
 <BaseLayout>
   <section class="hero">
     <h1 class="hero-title">
-      Crafted for deep thinking &amp; technical writing.
+      Notes on software, programming &amp; technology.
     </h1>
     <p class="hero-subtitle">
       {siteConfig.tagline}
@@ -37,7 +37,7 @@ const topTags = [...tagsMap.entries()]
     <div class="hero-actions">
       <a href="/blog" class="btn btn-primary">Read Articles →</a>
       <a href="/projects" class="btn btn-secondary">Explore Projects</a>
-      <a href="/about" class="btn btn-tertiary">About Minrock</a>
+      <a href="/about" class="btn btn-tertiary">About me</a>
     </div>
   </section>
 
@@ -45,14 +45,18 @@ const topTags = [...tagsMap.entries()]
   <section class="recent-posts">
     <div class="section-header">
       <h2 class="section-title">Latest Articles</h2>
-      <a href="/blog" class="all-link">View all ({allPosts.length}) →</a>
+      {allPosts.length > 0 && <a href="/blog" class="all-link">View all ({allPosts.length}) →</a>}
     </div>
 
-    <div class="posts-list">
-      {recentPosts.map((post) => (
-        <ArticleCard post={post} />
-      ))}
-    </div>
+    {recentPosts.length > 0 ? (
+      <div class="posts-list">
+        {recentPosts.map((post) => (
+          <ArticleCard post={post} />
+        ))}
+      </div>
+    ) : (
+      <p class="empty-state">No articles yet. Check back soon.</p>
+    )}
   </section>
 
   <!-- Featured Projects -->
@@ -209,6 +213,14 @@ const topTags = [...tagsMap.entries()]
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
+  }
+
+  .empty-state {
+    padding: 2rem 1.25rem;
+    text-align: center;
+    color: var(--text-muted);
+    border: 1px dashed var(--border);
+    border-radius: 8px;
   }
 
   .projects-grid {

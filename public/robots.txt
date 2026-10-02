@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://minrock.vercel.app/sitemap-index.xml
+Sitemap: https://lucarossid3v.github.io/sitemap-index.xml

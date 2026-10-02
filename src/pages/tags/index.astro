@@ -21,20 +21,24 @@ projects.forEach((proj) => {
 const sortedTags = Object.entries(tagCounts).sort((a, b) => b[1] - a[1]);
 ---
 
-<BaseLayout title="Tags | Minrock" description="Explore articles by topic and tag.">
+<BaseLayout title="Tags" description="Explore articles by topic and tag.">
   <header class="tags-header">
     <h1 class="tags-h1">Explore by Tag</h1>
     <p class="tags-subtitle">Browse notes and articles grouped by topics.</p>
   </header>
 
-  <div class="tags-cloud">
-    {sortedTags.map(([tag, count]) => (
-      <a href={`/tags/${tag}`} class="tag-pill">
-        <span class="tag-name">#{tag}</span>
-        <span class="tag-count">{count}</span>
-      </a>
-    ))}
-  </div>
+  {sortedTags.length > 0 ? (
+    <div class="tags-cloud">
+      {sortedTags.map(([tag, count]) => (
+        <a href={`/tags/${tag}`} class="tag-pill">
+          <span class="tag-name">#{tag}</span>
+          <span class="tag-count">{count}</span>
+        </a>
+      ))}
+    </div>
+  ) : (
+    <p class="tags-subtitle">No tags yet.</p>
+  )}
 </BaseLayout>
 
 <style>

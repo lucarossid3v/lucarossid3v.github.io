@@ -2,7 +2,7 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-Astro 7 static blog based on the Minrock theme. npm, Node >=22.12. Posts are written in English. Deploy target: GitHub Pages (domain not decided yet).
+Astro 7 static blog. npm, Node >=22.12. Posts are written in English. Deploy target: GitHub Pages (domain not decided yet).
 
 ## Commands
 
@@ -18,11 +18,11 @@ Astro 7 static blog based on the Minrock theme. npm, Node >=22.12. Posts are wri
 - Every page/endpoint filters `!data.draft` itself (pages, tags, RSS, `llms*.txt`, `search-index.json`). New routes must repeat the filter.
 - `src/content/` is also an Obsidian vault (`.obsidian/`, `_bases/`, `_GUIDE.md`) — don't delete or reformat those.
 
-## Placeholders to replace (change together)
-
-The theme's demo identity (Minrock / Renato Rezende / `minrock.vercel.app`, `example.com` socials, `rnt-rez/minrock` comments repo) is still in:
-`astro.config.mjs` (`site`), `src/config/site.ts`, `public/robots.txt`, `src/layouts/BaseLayout.astro` (fallbacks), `scripts/audit-google-search.mjs`. Also `SITE_URL` in `.env`. Demo posts/projects in `src/content/` are to be replaced.
-For GitHub Pages, also set `base` in `astro.config.mjs` if served from `/<repo>/`.
+## Site identity
+Blog name `lucarossi.d3` (author Luca Rossi, English, tech/programming). Identity, nav, socials and feature flags live in `src/config/site.ts`.
+- The domain is still a **placeholder** (`https://lucarossid3v.github.io`): update `site` in `astro.config.mjs`, the Sitemap line in `public/robots.txt`, the fallback in `src/config/site.ts` and `SITE_URL`. For GitHub Pages under `/<repo>/` also set `base`.
+- The Projects section is intentionally empty (empty-state shown).
+- `/about` content is hardcoded in `src/pages/about.astro`; keep it professional-only (no phone, address or birth date).
 
 ## Gotchas
 

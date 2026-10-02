@@ -24,7 +24,7 @@ export const GET: APIRoute = async ({ site }) => {
     '## General Information',
     `- Author: ${siteConfig.author}`,
     `- Website: ${baseUrl}`,
-    `- GitHub: ${siteConfig.socialLinks.github || 'https://github.com/rnt-rez/minrock'}`,
+    `- GitHub: ${siteConfig.socialLinks.github || baseUrl}`,
     `- RSS Feed: ${baseUrl}/rss.xml`,
     `- Full Markdown Context: ${baseUrl}/llms-full.txt`,
     '',

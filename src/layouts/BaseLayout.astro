@@ -17,11 +17,11 @@ interface Props {
 const {
   title = siteConfig.title,
   description = siteConfig.description,
-  image = '/og-image.png',
+  image,
   wide = false,
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://minrock.vercel.app');
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || siteConfig.siteUrl);
 const pageTitle = title === siteConfig.title ? `${siteConfig.title} — ${siteConfig.tagline}` : `${title} | ${siteConfig.title}`;
 
 const features = siteConfig.features ?? {};
@@ -35,9 +35,9 @@ const showImageZoom = features.imageZoom !== false;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪨</text></svg>" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2218%22 fill=%22%231f2937%22/><text x=%2250%22 y=%2266%22 font-size=%2248%22 font-family=%22monospace%22 font-weight=%22700%22 text-anchor=%22middle%22 fill=%22%23f5efe0%22>d3</text></svg>" />
     <link rel="canonical" href={canonicalURL} />
-    <link rel="alternate" type="application/rss+xml" title={siteConfig.title} href={new URL('/rss.xml', Astro.site || 'https://minrock.vercel.app')} />
+    <link rel="alternate" type="application/rss+xml" title={siteConfig.title} href={new URL('/rss.xml', Astro.site || siteConfig.siteUrl)} />
 
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
@@ -48,19 +48,19 @@ const showImageZoom = features.imageZoom !== false;
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL(image, canonicalURL)} />
+    {image && <meta property="og:image" content={new URL(image, canonicalURL)} />}
 
     <!-- Twitter / X -->
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
     <meta name="twitter:url" content={canonicalURL} />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={new URL(image, canonicalURL)} />
+    {image && <meta name="twitter:image" content={new URL(image, canonicalURL)} />}
 
     <!-- Anti-FOUC script: Executed synchronously before DOM render -->
     <script is:inline>
       (function () {
-        const savedTheme = localStorage.getItem('minrock_theme') || 'cream';
+        const savedTheme = localStorage.getItem('lrd3_theme') || 'cream';
         document.documentElement.setAttribute('data-theme', savedTheme);
       })();
     </script>

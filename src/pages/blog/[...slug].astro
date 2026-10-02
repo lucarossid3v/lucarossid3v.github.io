@@ -5,7 +5,6 @@ import ShareBar from '../../components/ShareBar.astro';
 import CopyCode from '../../components/CopyCode.astro';
 import AudioPlayer from '../../components/AudioPlayer.astro';
 import StructuredData from '../../components/StructuredData.astro';
-import Comments from '../../components/Comments.astro';
 import { getCollection, render } from 'astro:content';
 import { siteConfig } from '../../config/site';
 
@@ -130,9 +129,6 @@ const showToc = features.tableOfContents !== false && headings.length > 0;
             <div class="nav-spacer"></div>
           )}
         </nav>
-
-        <!-- 💬 Modular Comments Area -->
-        <Comments title={post.data.title} />
       </article>
     </div>
 
