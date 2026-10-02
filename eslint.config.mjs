@@ -10,7 +10,7 @@ export default [
   ...astro.configs.recommended,
   { languageOptions: { globals: { ...globals.node, ...globals.browser } } },
   {
-    // Baseline inherited from the Minrock theme: report, don't fail.
+    // Baseline inherited from the original theme: report, don't fail.
     rules: {
       '@typescript-eslint/no-explicit-any': 'warn',
       'prefer-const': 'warn',

@@ -2,7 +2,7 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-Astro 7 static blog based on the Minrock theme. npm, Node >=22.12. Posts are written in English. Deploy target: GitHub Pages (domain not decided yet).
+Astro 7 static blog. npm, Node >=22.12. Posts are written in English. Deploy target: GitHub Pages (domain not decided yet).
 
 ## Commands
 
@@ -19,9 +19,9 @@ Astro 7 static blog based on the Minrock theme. npm, Node >=22.12. Posts are wri
 - `src/content/` is also an Obsidian vault (`.obsidian/`, `_bases/`, `_GUIDE.md`) — don't delete or reformat those.
 
 ## Site identity
-Blog name `lucarossi.d3` (author Luca Rossi, English, tech/programming). Identity, nav, socials and feature flags live in `src/config/site.ts`; the theme is MIT-licensed Minrock (credit kept in `LICENSE`).
+Blog name `lucarossi.d3` (author Luca Rossi, English, tech/programming). Identity, nav, socials and feature flags live in `src/config/site.ts`.
 - The domain is still a **placeholder** (`https://lucarossid3v.github.io`): update `site` in `astro.config.mjs`, the Sitemap line in `public/robots.txt`, the fallback in `src/config/site.ts` and `SITE_URL`. For GitHub Pages under `/<repo>/` also set `base`.
-- Comments (ScatterLeaf) are disabled: without a broker they show fake comments. Projects section is intentionally empty (empty-state shown).
+- The Projects section is intentionally empty (empty-state shown).
 - `/about` content is hardcoded in `src/pages/about.astro`; keep it professional-only (no phone, address or birth date).
 
 ## Gotchas

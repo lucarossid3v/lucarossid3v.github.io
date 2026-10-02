@@ -3,7 +3,7 @@
   "configFilePath": "../../astro.config.mjs",
   "contentTypes": [
     {
-      "id": "content-type-minrock-blog",
+      "id": "content-type-blog",
       "name": "Blog",
       "folder": "blog",
       "fileOrganization": "folder",
@@ -12,7 +12,7 @@
       "linkBasePath": "/blog/"
     },
     {
-      "id": "content-type-minrock-projects",
+      "id": "content-type-projects",
       "name": "Projects",
       "folder": "projects",
       "fileOrganization": "folder",
@@ -22,7 +22,7 @@
     }
   ],
   "frontmatterProperties": {
-    "content-type-minrock-blog": {
+    "content-type-blog": {
       "titleProperty": "title",
       "dateProperty": "pubDate",
       "descriptionProperty": "description",
@@ -33,7 +33,7 @@
       "imageProperty": "image",
       "template": "---\ntitle: \"{{title}}\"\ndescription: \"\"\npubDate: {{date}}\ntags: []\ndraft: false\n---"
     },
-    "content-type-minrock-projects": {
+    "content-type-projects": {
       "titleProperty": "title",
       "dateProperty": "date",
       "descriptionProperty": "description",
@@ -77,7 +77,7 @@
   "astroComposerConfig": {
     "customContentTypes": [
       {
-        "id": "content-type-minrock-blog",
+        "id": "content-type-blog",
         "name": "Blog",
         "folder": "blog",
         "template": "---\ntitle: \"{{title}}\"\ndescription: \"\"\npubDate: {{date}}\ntags: []\ndraft: false\n---",
@@ -197,5 +197,5 @@
   "runWizardOnStartup": false,
   "wizardCompleted": true,
   "enableMdxSupport": false,
-  "defaultContentTypeId": "content-type-minrock-blog"
+  "defaultContentTypeId": "content-type-blog"
 }

@@ -279,7 +279,7 @@
 
       updateThemeUI(mode);
 
-      // Dispatch event for reactive components (like ScatterLeaf chameleon mode)
+      // Dispatch event for reactive components (theme-aware components)
       window.dispatchEvent(new CustomEvent('lrd3-theme-change', { detail: { theme: effective, mode } }));
     }
 

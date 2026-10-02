@@ -2,8 +2,6 @@
 
 Tech and programming blog by Luca Rossi, built with [Astro](https://astro.build) as a fully static site.
 
-The site is based on the MIT-licensed [Minrock](https://github.com/rnt-rez/minrock) theme by Renato Rezende.
-
 ## Requirements
 
 - Node.js >= 22.12

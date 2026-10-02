@@ -24,8 +24,6 @@ export interface SiteFeatures {
   backToTop?: boolean;
   /** Medium-style smooth image zoom modal on click */
   imageZoom?: boolean;
-  /** Interactive blog comments powered by ScatterLeaf */
-  comments?: boolean;
 }
 
 export interface SiteConfig {
@@ -46,26 +44,6 @@ export interface SiteConfig {
     title: string;
     href: string;
   }[];
-  comments?: {
-    enabled: boolean;
-    provider: 'scatterleaf';
-    repo: string;
-    category?: string;
-    theme?: 'auto' | 'light' | 'dark' | 'cream' | 'midnight' | 'slate';
-    lang?: string;
-    broker?: string;
-    clientId?: string;
-    order?: 'oldest' | 'newest';
-    features?: {
-      reactions?: boolean;
-      skinTone?: boolean;
-      sorting?: boolean;
-      codeScroll?: boolean;
-      preview?: boolean;
-      search?: boolean;
-      images?: boolean;
-    };
-  };
 }
 
 export const siteConfig: SiteConfig = {
@@ -93,8 +71,6 @@ export const siteConfig: SiteConfig = {
     themeSwitcher: true,
     backToTop: true,
     imageZoom: true,
-    // Off until a ScatterLeaf broker is configured (otherwise it shows simulated comments)
-    comments: false,
   },
   socialLinks: {
     github: 'https://github.com/lucarossid3v',
@@ -108,24 +84,4 @@ export const siteConfig: SiteConfig = {
     { title: 'Tags', href: '/tags' },
     { title: 'About', href: '/about' },
   ],
-  comments: {
-    enabled: false,
-    provider: 'scatterleaf',
-    repo: '',
-    category: 'General',
-    theme: 'auto',
-    lang: 'auto',
-    clientId: '',
-    // Comments are disabled. To enable live discussions, set `repo` and `clientId`, deploy a
-    // ScatterLeaf broker and supply its URL via PUBLIC_SCATTERLEAF_BROKER, then flip both flags.
-    // With an empty broker ScatterLeaf only shows simulated comments.
-    broker:
-      (typeof process !== 'undefined' &&
-        process.env?.PUBLIC_SCATTERLEAF_BROKER) ||
-      (import.meta as any).env?.PUBLIC_SCATTERLEAF_BROKER ||
-      '',
-    features: {
-      images: true,
-    },
-  },
 };
