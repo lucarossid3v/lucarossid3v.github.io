@@ -2,7 +2,6 @@
 import { siteConfig } from '../config/site';
 import ThemeToggle from './ThemeToggle.astro';
 import SocialDropdown from './SocialDropdown.astro';
-import LanguageSelector from './LanguageSelector.astro';
 
 interface Props {
   currentPath?: string;
@@ -59,11 +58,10 @@ const showThemeSwitcher = features.themeSwitcher !== false;
         </button>
       )}
 
-      <!-- Clustered Controls: Social + Theme + Language Dropdowns -->
+      <!-- Clustered Controls: Social + Theme Dropdowns -->
       <div class="header-controls">
         <SocialDropdown />
         {showThemeSwitcher && <ThemeToggle />}
-        <LanguageSelector />
       </div>
     </div>
   </div>
