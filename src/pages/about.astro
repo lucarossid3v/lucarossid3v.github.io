@@ -1,0 +1,111 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteConfig } from '../config/site';
+
+const { github, linkedin, email } = siteConfig.socialLinks;
+---
+
+<BaseLayout title="About" description="Luca Rossi: senior full stack developer and project manager, specialized in Laravel/PHP, Python/FastAPI and AI integration.">
+  <article class="about-page">
+    <header class="about-header">
+      <h1 class="page-title">About</h1>
+      <p class="page-subtitle">Senior Full Stack Developer &amp; Project Manager — Laravel/PHP, Python/FastAPI &amp; AI integration.</p>
+    </header>
+
+    <div class="about-content">
+      <h2>Hi, I'm Luca</h2>
+      <p>
+        I'm a full stack developer and project manager with more than 25 years of experience, based in Ticino, Switzerland. I specialize in the <strong>Laravel/PHP</strong> ecosystem and in <strong>Python with FastAPI</strong>, and in bringing <strong>AI/LLM</strong> solutions into real-world products.
+      </p>
+      <p>
+        I have designed and taken to production multi-tenant SaaS platforms for the utilities sector (water, electricity, gas), coordinating the development team as project manager and certified Scrum Master.
+      </p>
+
+      <h2>What this blog is about</h2>
+      <p>
+        <strong>{siteConfig.title}</strong> collects my notes on technology and programming: backend and web development, AI in practice, DevOps and tooling, and the way teams build software together.
+      </p>
+
+      <h2>What I do</h2>
+      <ul>
+        <li><strong>Multi-tenant SaaS:</strong> designed and maintained a Laravel platform for automated meter-reading management across web, mobile and bot channels.</li>
+        <li><strong>Python and FastAPI:</strong> APIs and services in Python, including <a href="/projects/geolayer-mcp">GeoLayer MCP</a>, an open-source MCP server built on FastAPI that gives AI assistants read-only access to geospatial data.</li>
+        <li><strong>Integrations and data:</strong> REST APIs for data exchange with utility management systems, plus ETL pipelines and Python crawlers for automated data acquisition.</li>
+        <li><strong>Automation:</strong> email/SMS/push communication systems built on queues and jobs, and management panels in FilamentPHP.</li>
+        <li><strong>AI integration:</strong> LLM assistants and contextual chatbots supporting internal operations.</li>
+        <li><strong>CI/CD:</strong> build and deploy pipelines written in Go.</li>
+        <li><strong>Team leadership:</strong> project management and Scrum, from analysis to release.</li>
+      </ul>
+
+      <h2>Tech stack</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Area</th>
+            <th>Technologies</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Backend</td><td>PHP, Laravel, FilamentPHP, Golang, REST API, multi-tenant architectures</td></tr>
+          <tr><td>Python</td><td>Python, FastAPI, MCP servers, crawlers and ETL pipelines</td></tr>
+          <tr><td>Frontend</td><td>Vue.js, Livewire, Inertia.js, Alpine.js, TailwindCSS, TypeScript/JavaScript</td></tr>
+          <tr><td>Mobile</td><td>Ionic, Cordova, Capacitor</td></tr>
+          <tr><td>AI</td><td>OpenAI, Anthropic Claude, Gemini, RAG, chatbots/assistants, prompt engineering, AI agents</td></tr>
+          <tr><td>AI-assisted dev</td><td>Claude Code, GitHub Copilot</td></tr>
+          <tr><td>Databases</td><td>MySQL, MongoDB, Redis, ElasticSearch, Firebird</td></tr>
+          <tr><td>DevOps</td><td>Docker, Git, GitHub Actions, CI/CD</td></tr>
+          <tr><td>CMS</td><td>WordPress, PrestaShop</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Experience</h2>
+      <ul>
+        <li><strong>Full Stack Developer / Project Manager</strong>, Bitsense sagl / Tecna SA, Paradiso (CH): 2010 – 2026</li>
+        <li><strong>Full Stack Developer</strong>, freelance: 2007 – 2010</li>
+        <li><strong>Web Developer</strong>, McData, LcData and WeryWeb (Rovigo, IT): 1999 – 2006</li>
+      </ul>
+
+      <h2>Certifications</h2>
+      <ul>
+        <li>Anthropic certifications (Skilljar platform)</li>
+      </ul>
+
+      <h2>Get in touch</h2>
+      <p>
+        {email && <a href={email}>Email</a>}
+        {github && <> · <a href={github} target="_blank" rel="noopener noreferrer">GitHub</a></>}
+        {linkedin && <> · <a href={linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a></>}
+      </p>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .about-page {
+    padding-top: 1rem;
+  }
+
+  .about-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .page-title {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 2.25rem;
+  }
+
+  .page-subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin: 0;
+  }
+
+  .about-content {
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+</style>
