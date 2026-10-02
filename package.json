@@ -1,0 +1,67 @@
+{
+  "name": "minrock",
+  "type": "module",
+  "version": "0.2.2",
+  "description": "Minimalist, typography-first Astro 7 theme crafted for technical writers and Obsidian vaults. Pure SSG, zero bloat.",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "author": "Renato Rezende (https://github.com/rnt-rez)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rnt-rez/minrock.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rnt-rez/minrock/issues"
+  },
+  "homepage": "https://github.com/rnt-rez/minrock#readme",
+  "keywords": [
+    "astro",
+    "astro-theme",
+    "obsidian",
+    "obsidian-vault",
+    "obsidian-md",
+    "obsidian-publish",
+    "typography",
+    "blog-theme",
+    "ssg",
+    "technical-writing",
+    "minimalist"
+  ],
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "qa": "astro check && astro build",
+    "audit:wcag": "node scripts/audit-wcag.mjs",
+    "audit:security": "node scripts/audit-security.mjs",
+    "audit:google": "node scripts/audit-google-search.mjs",
+    "astro": "astro",
+    "postinstall": "node scripts/sign-native-bindings.js",
+    "format": "prettier --write src scripts astro.config.mjs",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^7.2.9",
+    "photoswipe": "^5.4.4"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^22.13.9",
+    "eslint": "^10.11.0",
+    "eslint-plugin-astro": "^3.2.1",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.9",
+    "prettier-plugin-astro": "^1.1.0",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.71.0"
+  },
+  "allowScripts": {
+    "esbuild": true
+  }
+}
