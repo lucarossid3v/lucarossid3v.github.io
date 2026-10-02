@@ -1,6 +1,6 @@
-# 🪨 Minrock — Obsidian Vault Quickstart Guide
+# lucarossi.d3 — Obsidian Vault Quickstart Guide
 
-Welcome to your local content management vault! Minrock is designed to provide an ultra-clean, frictionless writing environment in **Obsidian** that directly powers your public Astro blog.
+Welcome to your local content management vault! This blog is designed to provide an ultra-clean, frictionless writing environment in **Obsidian** that directly powers your public Astro blog.
 
 ---
 
@@ -9,13 +9,13 @@ Welcome to your local content management vault! Minrock is designed to provide a
 When you open `src/content` as a vault in Obsidian:
 - **New Article**: Press `Ctrl / Cmd + N` (or click **+ New** in the Blog view).
 - **Pasting Images**: Press `Ctrl + V` inside any note. Screenshots and diagrams are automatically saved directly beside your post in the same folder.
-- **Publishing**: Use the Git status bar icon (or `Ctrl / Cmd + P` → `Git: Push`) to send your changes live to Vercel, Cloudflare, or GitHub.
+- **Publishing**: Use the Git status bar icon (or `Ctrl / Cmd + P` → `Git: Push`) to push your changes to GitHub (the site is deployed on GitHub Pages).
 
 ---
 
 ## 📁 The Page Bundle Architecture
 
-Minrock uses the **Folder-Based (Page Bundle)** structure:
+This blog uses the **Folder-Based (Page Bundle)** structure:
 
 ```text
 src/content/blog/
@@ -28,17 +28,17 @@ src/content/blog/
 ### Why this is optimal:
 1. **Self-Contained**: If you delete or move the post folder, all related media files move with it (zero orphaned images).
 2. **Native Preview**: Markdown image links like `![Architecture](architecture.png)` work both inside Obsidian and on your live Astro site.
-3. **Clean URLs**: Minrock generates the route `/blog/my-awesome-post/` automatically.
+3. **Clean URLs**: The site generates the route `/blog/my-awesome-post/` automatically.
 
 ---
 
 ## 🛠️ Vault CMS Wizard Mapping (If Starting From Scratch)
 
-If you ever run the **Vault CMS Setup Wizard** (`Ctrl / Cmd + P` → `Vault CMS: Open Wizard`), use these exact settings for Minrock:
+If you ever run the **Vault CMS Setup Wizard** (`Ctrl / Cmd + P` → `Vault CMS: Open Wizard`), use these exact settings:
 
-| Wizard Field | Recommended Value for Minrock | Note |
+| Wizard Field | Recommended Value | Note |
 | :--- | :--- | :--- |
-| **Welcome / Preset** | `Get started` (Do not apply theme presets) | Preserves Minrock's custom design |
+| **Welcome / Preset** | `Get started` (Do not apply theme presets) | Preserves the custom design |
 | **Project Root** | `../..` | Auto-detected relative to `src/content` |
 | **Config File** | `../../astro.config.mjs` | Astro configuration file |
 | **Content Type Name** | `Blog` | Name of your primary collection |
@@ -68,18 +68,17 @@ If you ever run the **Vault CMS Setup Wizard** (`Ctrl / Cmd + P` → `Vault CMS:
    ---
    title: "Your Article Title"
    description: "A concise summary for readers and search engines."
-   pubDate: 2026-09-16
+   pubDate: 2026-10-02
    tags: ["engineering", "design"]
    draft: false
    ---
    ```
 4. **Updating Community Plugins**:
-   - Keep plugins up to date with 1 click: **Settings** (`Ctrl + ,`) → **Community plugins** → **Check for updates** → **Update all**. Your Minrock settings are preserved automatically.
+   - Keep plugins up to date with 1 click: **Settings** (`Ctrl + ,`) → **Community plugins** → **Check for updates** → **Update all**. Your settings are preserved automatically.
 
 ---
 
 ## 🔗 External Resources & Walkthrough
 
-- **Comprehensive Online Guide**: [minrock.vercel.app/blog/obsidian-vault-guide](https://minrock.vercel.app/blog/obsidian-vault-guide)
 - **Vault CMS Official Website**: [vaultcms.org](https://vaultcms.org/)
 - **David Kimball's Walkthrough Video**: [YouTube (55s setup demo)](https://www.youtube.com/watch?v=MnXoikTajfI&t=55s)

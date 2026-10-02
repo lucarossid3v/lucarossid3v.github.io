@@ -12,12 +12,12 @@ const allTags = Array.from(new Set(allPosts.flatMap((p) => p.data.tags || []))).
 const showTags = siteConfig.features?.tags !== false;
 ---
 
-<BaseLayout title="Blog — All Notes">
+<BaseLayout title="Blog">
   <div class="blog-page">
     <header class="blog-header">
       <h1 class="page-title">Articles &amp; Notes</h1>
       <p class="page-desc">
-        Explorations in software engineering, technical writing, and minimalist design.
+        Notes on software engineering, programming and technology.
       </p>
 
       {showTags && allTags.length > 0 && (
@@ -30,6 +30,7 @@ const showTags = siteConfig.features?.tags !== false;
       )}
     </header>
 
+{allPosts.length > 0 ? (
     <section class="articles-section">
       <div class="section-header">
         <h2 class="section-title">
@@ -82,12 +83,16 @@ const showTags = siteConfig.features?.tags !== false;
         <p>No articles found matching your filter.</p>
       </div>
     </section>
+) : (
+    <p class="no-results" style="display: block;">No articles yet. Check back soon.</p>
+)}
   </div>
 </BaseLayout>
 
 <script>
   function setupArticlePagination() {
     const searchInput = document.getElementById('search-input') as HTMLInputElement;
+    if (!searchInput) return;
     const articleWrappers = Array.from(document.querySelectorAll<HTMLElement>('.article-wrapper'));
     const noResults = document.getElementById('no-results');
 

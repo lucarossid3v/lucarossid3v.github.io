@@ -190,9 +190,9 @@
     "isPrivate": true,
     "branchName": "main",
     "autoConfigureObsidianGit": true,
-    "repoName": "minrock"
+    "repoName": "lucarossi-d3v"
   },
-  "deploymentPlatform": "vercel",
+  "deploymentPlatform": "github-pages",
   "resolvePublicImages": true,
   "runWizardOnStartup": false,
   "wizardCompleted": true,

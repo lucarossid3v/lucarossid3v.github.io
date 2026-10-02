@@ -10,11 +10,11 @@ const topProjects = allProjects.filter((p) => p.data.featured).slice(0, 2);
 const categories = ['All', ...new Set(allProjects.map((p) => p.data.category))];
 ---
 
-<BaseLayout title="Projects" description="Open-source tools, themes, and developer utilities.">
+<BaseLayout title="Projects" description="Things I build and maintain.">
   <div class="projects-container">
     <header class="page-header">
       <h1 class="page-title">Projects</h1>
-      <p class="page-subtitle">Open-source tools, themes, and developer utilities.</p>
+      <p class="page-subtitle">Things I build and maintain.</p>
     </header>
 
     {topProjects.length > 0 && (
@@ -39,6 +39,7 @@ const categories = ['All', ...new Set(allProjects.map((p) => p.data.category))];
       </section>
     )}
 
+{allProjects.length > 0 ? (
     <section class="all-projects-section" id="projects-list-section">
       <div class="section-header">
         <h2 class="section-title">
@@ -116,12 +117,16 @@ const categories = ['All', ...new Set(allProjects.map((p) => p.data.category))];
         <p>No projects found matching your filter.</p>
       </div>
     </section>
+) : (
+    <p class="no-results" style="display: block;">No projects yet. Check back soon.</p>
+)}
   </div>
 </BaseLayout>
 
 <script>
   function setupProjectFilters() {
     const searchInput = document.getElementById('search-input') as HTMLInputElement;
+    if (!searchInput) return;
     const filterBtns = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
     const projectItems = Array.from(document.querySelectorAll<HTMLElement>('.project-item'));
     const noResults = document.getElementById('no-results');
