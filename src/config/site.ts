@@ -50,7 +50,7 @@ export const siteConfig: SiteConfig = {
   title: 'lucarossi.d3v',
   tagline: 'Code, tools and the occasional mistake.',
   description:
-    'A tech and programming blog by Luca Rossi: Laravel/PHP, AI and LLM integration, DevOps and the craft of building software.',
+    'A tech and programming blog by Luca Rossi: Laravel/PHP, Python, AI and LLM integration, DevOps and the craft of building software.',
   author: 'Luca Rossi',
   // Production domain (used for canonical SEO, OpenGraph, sitemap and RSS).
   // Placeholder until the final domain is decided; override via the SITE_URL environment variable.
