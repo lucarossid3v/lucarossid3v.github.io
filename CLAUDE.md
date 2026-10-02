@@ -19,9 +19,9 @@ Astro 7 static blog. npm, Node >=22.12. Posts are written in English. Deploy tar
 - `src/content/` is also an Obsidian vault (`.obsidian/`, `_bases/`, `_GUIDE.md`) — don't delete or reformat those.
 
 ## Site identity
-Blog name `lucarossi.d3` (author Luca Rossi, English, tech/programming). Identity, nav, socials and feature flags live in `src/config/site.ts`.
+Blog name `lucarossi.d3v` (author Luca Rossi, English, tech/programming). Identity, nav, socials and feature flags live in `src/config/site.ts`.
 - The domain is still a **placeholder** (`https://lucarossid3v.github.io`): update `site` in `astro.config.mjs`, the Sitemap line in `public/robots.txt`, the fallback in `src/config/site.ts` and `SITE_URL`. For GitHub Pages under `/<repo>/` also set `base`.
-- The Projects section is intentionally empty (empty-state shown).
+- Projects live in `src/content/projects/<slug>/index.md` (schema in `src/content.config.ts`); `featured: true` shows them on the homepage (max 2).
 - `/about` content is hardcoded in `src/pages/about.astro`; keep it professional-only (no phone, address or birth date).
 
 ## Gotchas

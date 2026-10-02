@@ -1,4 +1,4 @@
-# lucarossi.d3
+# lucarossi.d3v
 
 Tech and programming blog by Luca Rossi, built with [Astro](https://astro.build) as a fully static site.
 

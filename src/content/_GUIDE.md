@@ -1,4 +1,4 @@
-# lucarossi.d3 — Obsidian Vault Quickstart Guide
+# lucarossi.d3v — Obsidian Vault Quickstart Guide
 
 Welcome to your local content management vault! This blog is designed to provide an ultra-clean, frictionless writing environment in **Obsidian** that directly powers your public Astro blog.
 

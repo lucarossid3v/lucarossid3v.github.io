@@ -47,7 +47,7 @@ export interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-  title: 'lucarossi.d3',
+  title: 'lucarossi.d3v',
   tagline: 'Notes on software, programming and technology.',
   description:
     'A tech and programming blog by Luca Rossi: Laravel/PHP, AI and LLM integration, DevOps and the craft of building software.',
