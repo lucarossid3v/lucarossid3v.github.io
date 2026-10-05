@@ -1,7 +1,7 @@
 {
   "name": "lucarossi-d3v",
   "type": "module",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Tech and programming blog by Luca Rossi",
   "engines": {
     "node": ">=22.12.0"
