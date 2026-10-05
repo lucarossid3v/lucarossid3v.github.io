@@ -1,9 +1,9 @@
 ---
 title: 'Open Source in the Vibe Coding Era: In Crisis, Not Dying'
 description: 'AI and vibe coding are straining open source: slop PRs, collapsing docs traffic, licenses under pressure. Why the model is renegotiating, not dying.'
-pubDate: 2026-10-02
+pubDate: 2026-10-05
 tags: ['ai', 'open-source', 'vibe-coding', 'software-engineering']
-draft: true
+draft: false
 ---
 
 Look at January 2026 alone. tldraw started automatically closing pull requests from external contributors. Four economists published a paper titled, without hedging, "Vibe Coding Kills Open Source". Tailwind Labs laid off most of its engineering team, citing the impact of AI on its business. And curl, one of the most widely deployed pieces of software on the planet, shut down its bug bounty because the reports had become mostly noise.
@@ -38,7 +38,7 @@ Most "open source is dying" arguments describe the second or third layer and con
 <text x="10" y="79" font-weight="bold">Oct 2025</text><circle cx="92" cy="74" r="6"/><text x="108" y="79">AI analyzers: ~50 real curl fixes</text>
 <text x="10" y="127" font-weight="bold">Jan 2026</text><circle cx="92" cy="122" r="6"/><text x="108" y="127">tldraw auto-closes external PRs</text>
 <text x="108" y="151">"Vibe Coding Kills Open Source"</text>
-<text x="108" y="175">Tailwind lays off 3 of 4 engineers</text>
+<text x="108" y="175">Tailwind lays off 75% of engineers</text>
 <text x="108" y="199">curl ends its bug bounty</text>
 <text x="10" y="247" font-weight="bold">Feb 2026</text><circle cx="92" cy="242" r="6"/><text x="108" y="247">GitHub: restrict or disable PRs</text>
 <text x="108" y="271">AI agent attacks matplotlib maintainer</text>
@@ -67,7 +67,7 @@ The second pressure is the one maintainers talk about most. Generating a pull re
 
 The evidence piled up through 2025 and 2026:
 
-- **curl** [ended its bug bounty on 31 January 2026](https://daniel.haxx.se/blog/2026/01/26/the-end-of-the-curl-bug-bounty/). The program had confirmed 87 vulnerabilities since 2019, but the confirmation rate fell from around 15% in earlier years to below 5% in 2025. Daniel Stenberg blamed "the mind-numbing AI slop, humans doing worse than ever and the apparent will to poke holes rather than to help."
+- **curl** [ended its bug bounty on 31 January 2026](https://daniel.haxx.se/blog/2026/01/26/the-end-of-the-curl-bug-bounty/). The program had confirmed 87 vulnerabilities since 2019, but the confirmation rate fell from more than 15% in earlier years to below 5% in 2025. Daniel Stenberg blamed "the mind-numbing AI slop, humans doing worse than ever and the apparent will to poke holes rather than to help."
 - **tldraw** [began auto-closing external pull requests](https://github.com/tldraw/tldraw/issues/7695) in January 2026, citing a surge of contributions generated entirely by AI that misunderstood the codebase and came with little follow-up from their authors.
 - **Godot**'s Rémi Verschelde called AI-generated PRs "increasingly draining and demoralizing" for maintainers, as [reported by DevClass](https://www.devclass.com/ai-ml/2026/02/19/github-itself-to-blame-for-ai-slop-prs-say-devs/4091420).
 - **Jazzband**, a Python collective that maintained 84 projects downloaded more than 150 million times a month, [announced it was winding down](https://jazzband.co/news/2026/03/14/sunsetting-jazzband) in March 2026. Its open-membership model, it said, "was designed for a world where the worst case was someone accidentally merging the wrong PR." AI spam was one reason, alongside a single-maintainer bottleneck and a governance model that never found enough volunteers to share the load.
@@ -88,7 +88,7 @@ If the story stopped there, "dying" would be a fair word. It doesn't.
 
 First, activity is at record levels. [GitHub's Octoverse 2025](https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/), covering September 2024 to August 2025, counted 1.128 billion contributions to public and open source repositories (up 13%), 518.7 million merged pull requests (up 29%), and 255,000 first-time open source contributors in March 2025 alone, the largest month on record. Those numbers include plenty of noise, but they are not the numbers of an ecosystem people are leaving.
 
-Second, the same AI that floods maintainers can help them. The clearest example is curl again. In October 2025, Stenberg described [a new breed of AI-assisted analyzers](https://daniel.haxx.se/blog/2025/10/10/a-new-breed-of-analyzers/): from one researcher's first list of findings, the team merged about 50 separate bug fixes, with "remarkably few" complete false positives. The researcher, Joshua Rogers, did not paste raw tool output; he validated the findings first. The difference between slop and help was not the tool. It was whether a human took responsibility for the result.
+Second, the same AI that floods maintainers can help them. The clearest example is curl again. In October 2025, Stenberg described [a new breed of AI-assisted analyzers](https://daniel.haxx.se/blog/2025/10/10/a-new-breed-of-analyzers/): from one researcher's first list of findings, the team merged about 50 separate bug fixes, with "remarkably few" complete false positives. The researcher, Joshua Rogers, had spent months testing these tools, chose the ones that worked, and sent the results under his own name to a team ready to triage them. The difference between slop and help was not the tool. It was a human who stood behind the output and engaged with the people receiving it.
 
 That is the same line I drew for teams in [Vibe Coding vs. AI-Assisted Engineering](/blog/vibe-coding-vs-ai-assisted-engineering/): what matters is whether someone reviewed the work and could explain it.
 
@@ -96,9 +96,9 @@ That is the same line I drew for teams in [Vibe Coding vs. AI-Assisted Engineeri
 
 Look at what projects actually did in 2026, and a new shape appears. Four changes stand out.
 
-**1. Open source, curated contribution.** The license stays open; the door to contributing narrows. GitHub [shipped settings](https://github.blog/changelog/2026-02-13-new-repository-settings-for-configuring-pull-request-access/) on 13 February 2026 to disable pull requests or restrict them to collaborators, and its maintainer post lists further ideas such as requiring a linked issue before a PR. This is closer to how SQLite has always worked: open code, closed contribution. It was a niche model; it is becoming a common one.
+**1. Open source, curated contribution.** The license stays open; the door to contributing narrows. GitHub [shipped settings](https://github.blog/changelog/2026-02-13-new-repository-settings-for-configuring-pull-request-access/) on 13 February 2026 to disable pull requests or restrict them to collaborators, and its maintainer post lists further ideas such as requiring a linked issue before a PR. This is closer to how [SQLite has always worked](https://sqlite.org/copyright.html): open code, closed contribution. It was a niche model; it is becoming a common one.
 
-**2. Disclosure and accountability instead of blanket bans.** Early reactions were bans: QEMU, Gentoo and NetBSD rejected LLM-generated contributions. The trend since then is toward rules that put responsibility on a named human. Ghostty's [AI policy](https://github.com/ghostty-org/ghostty/blob/main/AI_POLICY.md) requires that "all AI usage in any form must be disclosed" and that the human "must fully understand all code", adding: "It's the people, not the tools, that are the problem." The Linux kernel, Fedora and LLVM have converged on an [`Assisted-by:` commit trailer](https://allthingsopen.org/articles/open-source-ai-contributions-assisted-by-git-trailer-standard). In May 2026 a QEMU maintainer [proposed relaxing](https://www.theregister.com/ai-and-ml/2026/05/29/qemu-mulls-relaxing-ai-contribution-ban/5248638) the project's ban for documentation and small fixes. And on 29 August 2026 Debian [voted for responsible use](https://lwn.net/Articles/1091231/): the project "neither endorses nor prohibits" the tools, and "the use of a generative AI tool does not diminish the contributor's responsibility for the work they submit."
+**2. Disclosure and accountability instead of blanket bans.** Early reactions were bans: [QEMU, Gentoo and NetBSD](https://allthingsopen.org/articles/open-source-ai-contributions-assisted-by-git-trailer-standard) rejected LLM-generated contributions. The trend since then is toward rules that put responsibility on a named human. Ghostty's [AI policy](https://github.com/ghostty-org/ghostty/blob/main/AI_POLICY.md) requires that "all AI usage in any form must be disclosed" and that the human "must fully understand all code", adding: "It's the people, not the tools, that are the problem." The Linux kernel, Fedora and LLVM have converged on an [`Assisted-by:` commit trailer](https://allthingsopen.org/articles/open-source-ai-contributions-assisted-by-git-trailer-standard). In May 2026 a QEMU maintainer [proposed relaxing](https://www.theregister.com/ai-and-ml/2026/05/29/qemu-mulls-relaxing-ai-contribution-ban/5248638) the project's ban for documentation and small fixes. And on 29 August 2026 Debian [voted for responsible use](https://lwn.net/Articles/1091231/): the project "neither endorses nor prohibits" the tools, and "the use of a generative AI tool does not diminish the contributor's responsibility for the work they submit."
 
 **3. Funding that does not depend on page views.** If attention no longer pays, someone else has to. Public money is one answer: Germany's Sovereign Tech Agency says it has [invested more than €41 million across 112 critical open source projects](https://www.sovereign.tech/news/maintain-a-thon-2026). It is a small sum against the value of the software involved, but it is funding tied to how critical a project is, not to how many people visit its docs.
 
@@ -112,7 +112,7 @@ Look at what projects actually did in 2026, and a new shape appears. Four change
 
 ## The risk nobody is pricing in
 
-The last column of that table hides the risk I worry about most. Many of today's maintainers started with a typo fix, then a "good first issue", then commit access. Every gate that keeps slop out also makes that path harder for a human beginner. The matplotlib PR that triggered the attack was on an issue the project had reserved for new human contributors, precisely because that path matters.
+The last column of that table hides the risk I worry about most. Many of today's maintainers started with a typo fix, then a "good first issue", then commit access. Every gate that keeps slop out also makes that path harder for a human beginner. The matplotlib PR that triggered the attack was on an issue labelled as an easy first issue, which Shambaugh wanted to leave for a new human contributor, precisely because that path matters.
 
 If the door closes for agents and humans alike, projects will be safer this year and short of maintainers in ten. The projects that handle this well will be the ones that build a separate, explicit path for people: mentorship, vouching, issues assigned to named humans. That is more work for maintainers, which brings us back to funding.
 
