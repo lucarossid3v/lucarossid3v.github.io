@@ -32,3 +32,8 @@ materiale/
 PROGRESS.md
 AGENTS.md
 .agents/
+
+# Private vault notes (briefs, inbox, notes): never published
+src/content/_inbox/
+src/content/_notes/
+src/content/_briefs/

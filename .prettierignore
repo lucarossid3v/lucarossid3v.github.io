@@ -1,0 +1,9 @@
+# Obsidian vault internals: never reformat
+src/content/.obsidian/
+src/content/_bases/
+src/content/_GUIDE.md
+
+# Private vault notes (gitignored)
+src/content/_inbox/
+src/content/_notes/
+src/content/_briefs/
