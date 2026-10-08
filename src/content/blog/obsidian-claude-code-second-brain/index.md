@@ -1,9 +1,9 @@
 ---
 title: 'Obsidian + Claude Code: A Second-Brain Setup That Persists'
-description: 'How to set up an Obsidian vault for Claude Code: CLAUDE.md, folder structure, imports, skills and hooks, plus the limits and risks of letting an agent write to your notes.'
+description: 'Set up an Obsidian vault for Claude Code: CLAUDE.md, rules, skills and hooks, plus the limits and risks of letting an agent write to your notes.'
 pubDate: 2026-10-08
 tags: ['ai', 'claude-code', 'obsidian', 'productivity']
-draft: true
+draft: false
 ---
 
 Claude Code is very good at working in files, and an Obsidian vault is just a folder of Markdown files. That makes the pairing obvious. It also makes it easy to get wrong, because every Claude Code session starts empty, and most guides stop at "put a `CLAUDE.md` in the vault".
@@ -249,7 +249,7 @@ Letting an agent write to your notes is a trade-off. Four things to plan for.
 
 **Privacy.** Claude Code sends your prompts and the model's outputs to the model provider over the network. Any file contents Claude has read into the conversation travel with them. Retention and training rules depend on your account type, as Anthropic's [data usage page](https://code.claude.com/docs/en/data-usage) explains. Keep secrets, credentials and client data out of the vault, or in a folder Claude is told, and technically prevented, from reading.
 
-**Prompt injection.** Web clippings and imported documents are untrusted text. [Indirect prompt injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/) is when instructions hidden in external content change the model's behavior, so a note that contains instructions can be read as instructions. Keep imported material in a separate folder, review it before it enters the main notes, and do not give the session more permissions than the task needs.
+**Prompt injection.** Web clippings and imported documents are untrusted text. [Indirect prompt injection](https://genai.owasp.org/llmrisk/llm01-prompt-injection/) is when instructions hidden in external content change the model's behavior, so a note that contains instructions can be read as instructions. Keep imported material in a separate folder, review it before it enters the main notes, and do not give the session more permissions than the task needs. The wider open-source community is learning the same lesson about autonomous agents, as I describe in [Open Source in the Vibe Coding Era](/blog/open-source-vibe-coding-era/).
 
 **Context cost.** A big vault does not fit in one context window, and a long `CLAUDE.md` makes adherence worse. Rely on folder names and index notes so Claude opens a few files rather than scanning everything. This is the same discipline I argue for in [Vibe Coding vs. AI-Assisted Engineering](/blog/vibe-coding-vs-ai-assisted-engineering/): the tool is fast, and the judgment stays with you.
 
