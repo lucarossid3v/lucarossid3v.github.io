@@ -1,0 +1,51 @@
+filters:
+  and:
+    - file.ext == "md"
+properties:
+  note.status:
+    displayName: Status
+  note.lang:
+    displayName: Lang
+  note.draft:
+    displayName: Draft
+  note.pubDate:
+    displayName: PubDate
+  note.title:
+    displayName: Title
+views:
+  - type: table
+    name: Inbox
+    filters:
+      and:
+        - file.inFolder("_inbox")
+    order:
+      - file.name
+      - status
+      - file.mtime
+    sort:
+      - property: file.mtime
+        direction: DESC
+  - type: table
+    name: Briefs
+    filters:
+      and:
+        - file.inFolder("_briefs")
+    order:
+      - file.name
+      - status
+      - lang
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Drafts
+    filters:
+      and:
+        - file.inFolder("blog")
+        - draft == true
+    order:
+      - title
+      - pubDate
+    sort:
+      - property: pubDate
+        direction: DESC

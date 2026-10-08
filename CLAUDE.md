@@ -16,7 +16,7 @@ Astro 7 static blog. npm, Node >=22.12. Posts are written in English. Deploy tar
 - Posts are page bundles: `src/content/blog/<slug>/index.md` (slug = folder name, images beside `index.md`). Files starting with `_` are ignored.
 - Schema in `src/content.config.ts`: `title`, `description`, `pubDate` (YYYY-MM-DD) required; `tags`, `draft`, `image` (path under `public/`), `audio` (defaults to true). `updatedDate` is defined but unused.
 - Every page/endpoint filters `!data.draft` itself (pages, tags, RSS, `llms*.txt`, `search-index.json`). New routes must repeat the filter.
-- `src/content/` is also an Obsidian vault (`.obsidian/`, `_bases/`, `_GUIDE.md`) — don't delete or reformat those.
+- `src/content/` is also an Obsidian vault managed with Claude Code: see `.claude/rules/content-vault.md`. `_inbox/`, `_notes/`, `_briefs/` are private and gitignored.
 
 ## Site identity
 Blog name `lucarossi.d3v` (author Luca Rossi, English, tech/programming). Identity, nav, socials and feature flags live in `src/config/site.ts`.
@@ -31,3 +31,4 @@ Blog name `lucarossi.d3v` (author Luca Rossi, English, tech/programming). Identi
 - Feature flags live in `siteConfig.features` and are checked with `!== false` (missing = enabled).
 - Plain CSS only (no Tailwind/MDX/React). The `@/*` alias exists but code uses relative imports.
 - Style: 2-space indent, single quotes, semicolons, ESM with `node:` imports.
+- `.claude/hooks/guard-vault.mjs` blocks Write/Edit on `src/content/.obsidian/`, `_bases/` and `_GUIDE.md`; edit those by hand in Obsidian.

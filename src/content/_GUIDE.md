@@ -78,6 +78,18 @@ If you ever run the **Vault CMS Setup Wizard** (`Ctrl / Cmd + P` → `Vault CMS:
 
 ---
 
+## 🤖 Working with Claude Code
+
+Claude Code works on the **repository**, not on `src/content/` alone, so hooks, skills and `npm run qa` all apply.
+
+- **Start a session**: run the Astro Composer command "Open terminal" (it opens the repo root), then `claude`.
+- **Private folders** (gitignored, never published): `_inbox/` raw notes, `_notes/` atomic notes, `_briefs/` post briefs, plus `_templates/` (versioned). The `Pipeline` base shows inbox, briefs and drafts.
+- **Skills**: `/inbox` sorts `_inbox/`, `/brief-to-draft <brief>` creates a draft post from a brief, `/weekly-review` reports stalled drafts and briefs, `/new-post <title>` scaffolds an empty post.
+- **Protected**: Claude cannot write to `.obsidian/`, `_bases/` or this guide (hook `guard-vault.mjs`). Edit those by hand in Obsidian.
+- **Frontmatter check**: after editing a post or project, a hook flags missing `title`, `description` or dates.
+
+---
+
 ## 🔗 External Resources & Walkthrough
 
 - **Vault CMS Official Website**: [vaultcms.org](https://vaultcms.org/)
