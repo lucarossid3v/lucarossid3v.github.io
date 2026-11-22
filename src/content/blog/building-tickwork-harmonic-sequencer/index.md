@@ -1,6 +1,6 @@
 ---
-title: "Building Tickwork: A Harmonic Step Sequencer, From Browser Prototype to Apple Native"
-description: "How I am building Tickwork, a key-aware MIDI step sequencer: a TypeScript web prototype used as an executable spec for a Swift and AUv3 port on iPad, iPhone and Mac."
+title: 'Building Tickwork: A Harmonic Step Sequencer, From Browser Prototype to Apple Native'
+description: 'How I am building Tickwork, a key-aware MIDI step sequencer: a TypeScript web prototype used as an executable spec for a Swift and AUv3 port on iPad, iPhone and Mac.'
 pubDate: 2026-11-22
 tags:
   - tickwork
@@ -15,9 +15,13 @@ Most step sequencers make it easy to write a wrong note. You draw a pattern, cha
 
 That idea became Tickwork, an audio and MIDI sequencer I am building for the Apple ecosystem. It is not released yet. A limited web edition, [Tickwork Light](https://lucarossid3v.github.io/tickwork-light/), is online if you want to try the core idea in a browser. This post covers what Tickwork is, how it is built, and what I learned using the web prototype as the specification for the native app.
 
+> [!TIP]
+> **Try it now.** The web version, Tickwork Light, runs in your browser at [https://lucarossid3v.github.io/tickwork-light](https://lucarossid3v.github.io/tickwork-light). No installation needed. Use a Chromium-based browser such as Chrome or Edge for the best experience.
+
 > **Key Takeaways**
 >
 > - Tickwork is a harmonic step sequencer: tracks follow the chord line and stay in the key.
+> - A free, limited web version is usable online at [lucarossid3v.github.io/tickwork-light](https://lucarossid3v.github.io/tickwork-light).
 > - It started as a TypeScript browser app and was ported to Swift as a standalone app and an AUv3 MIDI plugin for iPadOS, iOS and macOS.
 > - The core of the engine is a pure, deterministic function, which makes live playback and `.mid` export agree and makes the port testable.
 > - I build it with AI assistance, but with specs, tests and mutation checks, not by accepting whatever the model returns.
